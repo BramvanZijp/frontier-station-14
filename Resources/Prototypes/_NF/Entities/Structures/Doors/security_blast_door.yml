@@ -1,0 +1,34 @@
+- type: entity
+  id: SecurityBlastDoor
+  parent: BlastDoor
+  name: blast door
+  suffix: Security
+  components:
+  - type: AccessReader
+    access: [["Security"]]
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 750
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+
+- type: entity
+  id: SecurityBlastDoorOpen
+  parent: SecurityBlastDoor
+  suffix: Open, Security
+  components:
+  - type: AccessReader
+    access: [["Security"]]
+  - type: Door
+    state: Open
+  - type: Occluder
+    enabled: false
+  - type: Physics
+    canCollide: false
+  - type: Airtight
+    airBlocked: false
+  - type: RadiationBlocker
+    enabled: false
