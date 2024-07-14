@@ -1,0 +1,27 @@
+- type: vessel
+  id: Gunner
+  name: NSF Gunner
+  description: Small medical shuttle with a stasis bed and crew monitoring console.
+  price: 999 # Price to be Determined.
+  category: Small
+  group: None
+  access: Security
+  mapchecker_group_override: Security  # Treat this as a security vessel for mapchecker purposes
+  shuttlePath: /Maps/_NF/Shuttles/Nfsd/gunner.yml
+
+- type: gameMap
+  id: Gunner
+  mapName: 'NSF Gunner'
+  mapPath: /Maps/_NF/Shuttles/Nfsd/Gunner.yml
+  minPlayers: 0
+  stations:
+    Gunner:
+      stationProto: StandardFrontierSecurityVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Gunner {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs: {}

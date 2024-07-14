@@ -1,0 +1,27 @@
+- type: vessel
+  id: Ferry
+  name: NSF Ferry
+  description: Small transport shuttle with a bay with conveyers designed for cargo.
+  price: 999 # Price to be Determined.
+  category: Small
+  group: None
+  access: Security
+  mapchecker_group_override: Security  # Treat this as a security vessel for mapchecker purposes
+  shuttlePath: /Maps/_NF/Shuttles/Nfsd/ferry.yml
+
+- type: gameMap
+  id: Ferry
+  mapName: 'NSF Ferry'
+  mapPath: /Maps/_NF/Shuttles/Nfsd/Ferry.yml
+  minPlayers: 0
+  stations:
+    Ferry:
+      stationProto: StandardFrontierSecurityVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Ferry {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs: {}
