@@ -14,7 +14,7 @@ entities:
     components:
     - type: MetaData
     - type: Transform
-      pos: -0.4765625,-0.5234375
+      pos: 9.5234375,-0.5234375
       parent: invalid
     - type: MapGrid
       chunks:
@@ -98,8 +98,6 @@ entities:
     - type: Transform
       pos: 0.5,-3.5
       parent: 1
-    - type: PriorityDock
-      tag: VersusAux
 - proto: APCBasic
   entities:
   - uid: 3
@@ -128,94 +126,97 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 1.5,-3.5
       parent: 1
-- proto: CableApcExtension
+- proto: BaseComputer
   entities:
   - uid: 7
     components:
     - type: Transform
-      pos: -0.5,1.5
+      rot: -1.5707963267948966 rad
+      pos: 1.5,0.5
       parent: 1
+- proto: CableApcExtension
+  entities:
   - uid: 8
     components:
     - type: Transform
-      pos: 0.5,1.5
+      pos: -0.5,1.5
       parent: 1
   - uid: 9
     components:
     - type: Transform
-      pos: 1.5,1.5
+      pos: 0.5,1.5
       parent: 1
   - uid: 10
     components:
     - type: Transform
-      pos: 0.5,0.5
+      pos: 1.5,1.5
       parent: 1
   - uid: 11
     components:
     - type: Transform
-      pos: 0.5,-1.5
+      pos: 0.5,0.5
       parent: 1
   - uid: 12
     components:
     - type: Transform
-      pos: 0.5,-0.5
+      pos: 0.5,-1.5
       parent: 1
   - uid: 13
     components:
     - type: Transform
-      pos: 0.5,-2.5
+      pos: 0.5,-0.5
       parent: 1
   - uid: 14
     components:
     - type: Transform
-      pos: 0.5,2.5
+      pos: 0.5,-2.5
       parent: 1
   - uid: 15
     components:
     - type: Transform
-      pos: 0.5,3.5
+      pos: 0.5,2.5
       parent: 1
   - uid: 16
     components:
     - type: Transform
-      pos: -0.5,3.5
+      pos: 0.5,3.5
       parent: 1
   - uid: 17
     components:
     - type: Transform
-      pos: 1.5,3.5
+      pos: -0.5,3.5
       parent: 1
   - uid: 18
+    components:
+    - type: Transform
+      pos: 1.5,3.5
+      parent: 1
+  - uid: 19
     components:
     - type: Transform
       pos: 0.5,-3.5
       parent: 1
 - proto: CableHV
   entities:
-  - uid: 19
+  - uid: 20
     components:
     - type: Transform
       pos: -1.5,-3.5
       parent: 1
-  - uid: 20
+  - uid: 21
     components:
     - type: Transform
       pos: -0.5,-3.5
       parent: 1
-  - uid: 21
+  - uid: 22
     components:
     - type: Transform
       pos: 0.5,-3.5
       parent: 1
-  - uid: 22
-    components:
-    - type: Transform
-      pos: 1.5,-3.5
-      parent: 1
   - uid: 23
     components:
     - type: Transform
-      pos: 2.5,-3.5
+      pos: 1.5,-3.5
       parent: 1
   - uid: 24
     components:
@@ -225,136 +226,133 @@ entities:
   - uid: 25
     components:
     - type: Transform
-      pos: 2.5,-2.5
+      pos: 2.5,-3.5
       parent: 1
   - uid: 26
     components:
     - type: Transform
-      pos: 2.5,-1.5
+      pos: 2.5,-2.5
       parent: 1
   - uid: 27
     components:
     - type: Transform
-      pos: 2.5,-0.5
+      pos: 2.5,-1.5
       parent: 1
   - uid: 28
     components:
     - type: Transform
-      pos: 2.5,0.5
+      pos: 2.5,-0.5
       parent: 1
   - uid: 29
     components:
     - type: Transform
-      pos: 2.5,1.5
+      pos: 2.5,0.5
       parent: 1
   - uid: 30
     components:
     - type: Transform
-      pos: 1.5,1.5
+      pos: 2.5,1.5
       parent: 1
   - uid: 31
     components:
     - type: Transform
-      pos: 1.5,2.5
+      pos: 1.5,1.5
       parent: 1
   - uid: 32
     components:
     - type: Transform
-      pos: 1.5,3.5
+      pos: 1.5,2.5
       parent: 1
   - uid: 33
     components:
     - type: Transform
-      pos: 1.5,4.5
+      pos: 1.5,3.5
       parent: 1
   - uid: 34
     components:
     - type: Transform
-      pos: 0.5,4.5
+      pos: 1.5,4.5
       parent: 1
   - uid: 35
     components:
     - type: Transform
-      pos: -0.5,4.5
+      pos: 0.5,4.5
       parent: 1
   - uid: 36
     components:
     - type: Transform
-      pos: -0.5,3.5
+      pos: -0.5,4.5
       parent: 1
   - uid: 37
     components:
     - type: Transform
-      pos: -0.5,2.5
+      pos: -0.5,3.5
       parent: 1
   - uid: 38
     components:
     - type: Transform
-      pos: -0.5,1.5
+      pos: -0.5,2.5
       parent: 1
   - uid: 39
     components:
     - type: Transform
-      pos: -1.5,1.5
+      pos: -0.5,1.5
       parent: 1
   - uid: 40
     components:
     - type: Transform
-      pos: -1.5,0.5
+      pos: -1.5,1.5
       parent: 1
   - uid: 41
     components:
     - type: Transform
-      pos: -1.5,-0.5
+      pos: -1.5,0.5
       parent: 1
   - uid: 42
     components:
     - type: Transform
-      pos: -1.5,-1.5
+      pos: -1.5,-0.5
       parent: 1
   - uid: 43
+    components:
+    - type: Transform
+      pos: -1.5,-1.5
+      parent: 1
+  - uid: 44
     components:
     - type: Transform
       pos: -1.5,-2.5
       parent: 1
 - proto: CableMV
   entities:
-  - uid: 44
+  - uid: 45
     components:
     - type: Transform
       pos: -0.5,1.5
       parent: 1
-  - uid: 45
+  - uid: 46
     components:
     - type: Transform
       pos: 0.5,1.5
       parent: 1
-  - uid: 46
+  - uid: 47
     components:
     - type: Transform
       pos: 1.5,1.5
       parent: 1
 - proto: ChairPilotSeat
   entities:
-  - uid: 47
+  - uid: 48
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 0.5,1.5
       parent: 1
-  - uid: 48
+  - uid: 49
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 0.5,2.5
-      parent: 1
-- proto: ComputerIFF
-  entities:
-  - uid: 49
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 1.5,0.5
       parent: 1
 - proto: ComputerShuttle
   entities:
@@ -363,6 +361,84 @@ entities:
     - type: Transform
       pos: 0.5,3.5
       parent: 1
+- proto: ConveyorBelt
+  entities:
+  - uid: 104
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -0.5,-3.5
+      parent: 1
+    - type: DeviceLinkSink
+      invokeCounter: 4
+      links:
+      - 114
+  - uid: 105
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -0.5,-2.5
+      parent: 1
+    - type: DeviceLinkSink
+      invokeCounter: 4
+      links:
+      - 114
+  - uid: 106
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -0.5,-1.5
+      parent: 1
+    - type: DeviceLinkSink
+      invokeCounter: 4
+      links:
+      - 114
+  - uid: 107
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -0.5,-0.5
+      parent: 1
+    - type: DeviceLinkSink
+      invokeCounter: 4
+      links:
+      - 114
+  - uid: 108
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 1.5,-3.5
+      parent: 1
+    - type: DeviceLinkSink
+      links:
+      - 112
+  - uid: 109
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 1.5,-2.5
+      parent: 1
+    - type: DeviceLinkSink
+      links:
+      - 112
+  - uid: 110
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 1.5,-1.5
+      parent: 1
+    - type: DeviceLinkSink
+      links:
+      - 112
+  - uid: 111
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 1.5,-0.5
+      parent: 1
+    - type: DeviceLinkSink
+      links:
+      - 112
 - proto: DefibrillatorCabinetFilled
   entities:
   - uid: 51
@@ -442,45 +518,78 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 1.5,2.5
       parent: 1
-- proto: PlastitaniumWindow
+- proto: PlasmaReinforcedWindowDirectional
   entities:
   - uid: 63
+    components:
+    - type: Transform
+      pos: 1.5,0.5
+      parent: 1
+  - uid: 64
+    components:
+    - type: Transform
+      pos: -0.5,0.5
+      parent: 1
+- proto: PlasmaWindoorSecureSecurityLocked
+  entities:
+  - uid: 65
+    components:
+    - type: Transform
+      pos: 0.5,0.5
+      parent: 1
+- proto: PlasticFlapsAirtightClear
+  entities:
+  - uid: 102
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 1.5,-3.5
+      parent: 1
+  - uid: 103
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -0.5,-3.5
+      parent: 1
+- proto: PlastitaniumWindow
+  entities:
+  - uid: 66
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -0.5,2.5
       parent: 1
-  - uid: 64
+  - uid: 67
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -0.5,3.5
       parent: 1
-  - uid: 65
+  - uid: 68
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -0.5,4.5
       parent: 1
-  - uid: 66
+  - uid: 69
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 0.5,4.5
       parent: 1
-  - uid: 67
+  - uid: 70
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 1.5,4.5
       parent: 1
-  - uid: 68
+  - uid: 71
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 1.5,3.5
       parent: 1
-  - uid: 69
+  - uid: 72
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
@@ -488,56 +597,46 @@ entities:
       parent: 1
 - proto: Poweredlight
   entities:
-  - uid: 70
+  - uid: 73
     components:
-    - type: MetaData
-      flags: PvsPriority
     - type: Transform
       pos: 0.5,3.5
       parent: 1
-  - uid: 71
+  - uid: 74
     components:
-    - type: MetaData
-      flags: PvsPriority
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -0.5,-1.5
       parent: 1
-  - uid: 72
+  - uid: 75
     components:
-    - type: MetaData
-      flags: PvsPriority
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 1.5,-1.5
       parent: 1
 - proto: SecurityBlastDoor
   entities:
-  - uid: 73
+  - uid: 76
     components:
-    - type: MetaData
-      flags: PvsPriority
     - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -0.5,-3.5
-      parent: 1
-    - type: DeviceLinkSink
-      links:
-      - 76
-  - uid: 74
-    components:
-    - type: MetaData
-      flags: PvsPriority
-    - type: Transform
-      rot: -1.5707963267948966 rad
+      rot: 3.141592653589793 rad
       pos: 1.5,-3.5
       parent: 1
     - type: DeviceLinkSink
       links:
-      - 75
+      - 78
+  - uid: 77
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -0.5,-3.5
+      parent: 1
+    - type: DeviceLinkSink
+      links:
+      - 79
 - proto: SignalButtonDirectional
   entities:
-  - uid: 75
+  - uid: 78
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
@@ -545,9 +644,9 @@ entities:
       parent: 1
     - type: DeviceLinkSource
       linkedPorts:
-        74:
+        76:
         - Pressed: Toggle
-  - uid: 76
+  - uid: 79
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
@@ -555,19 +654,21 @@ entities:
       parent: 1
     - type: DeviceLinkSource
       linkedPorts:
-        73:
+        77:
         - Pressed: Toggle
 - proto: SmallGyroscopeSecurity
   entities:
-  - uid: 77
+  - uid: 80
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 2.5,2.5
       parent: 1
+    - type: Thruster
+      originalPowerLoad: 200
 - proto: SpawnPointLatejoin
   entities:
-  - uid: 78
+  - uid: 81
     components:
     - type: Transform
       rot: 3.141592653589793 rad
@@ -575,7 +676,7 @@ entities:
       parent: 1
 - proto: SubstationWallBasic
   entities:
-  - uid: 79
+  - uid: 82
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
@@ -583,135 +684,172 @@ entities:
       parent: 1
 - proto: ThrusterSecurity
   entities:
-  - uid: 80
+  - uid: 83
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 2.5,3.5
       parent: 1
-  - uid: 81
+    - type: Thruster
+      originalPowerLoad: 1500
+  - uid: 84
     components:
     - type: Transform
       pos: 2.5,4.5
       parent: 1
-  - uid: 82
+    - type: Thruster
+      originalPowerLoad: 1500
+  - uid: 85
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -1.5,4.5
       parent: 1
-  - uid: 83
+    - type: Thruster
+      originalPowerLoad: 1500
+  - uid: 86
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -1.5,3.5
       parent: 1
+    - type: Thruster
+      originalPowerLoad: 1500
+- proto: TwoWayLever
+  entities:
+  - uid: 112
+    components:
+    - type: Transform
+      pos: 1,-2
+      parent: 1
+    - type: DeviceLinkSource
+      linkedPorts:
+        108:
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
+        109:
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
+        110:
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
+        111:
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
+  - uid: 113
+    components:
+    - type: Transform
+      pos: -0.31719303,-2.434369
+      parent: 1
+  - uid: 114
+    components:
+    - type: Transform
+      pos: 0,-2
+      parent: 1
+    - type: DeviceLinkSource
+      linkedPorts:
+        104:
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
+        105:
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
+        106:
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
+        107:
+        - Left: Forward
+        - Right: Reverse
+        - Middle: Off
 - proto: WallPlastitanium
   entities:
-  - uid: 84
+  - uid: 87
     components:
-    - type: MetaData
-      flags: PvsPriority
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -1.5,-3.5
       parent: 1
-  - uid: 85
+  - uid: 88
     components:
-    - type: MetaData
-      flags: PvsPriority
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -1.5,-2.5
       parent: 1
-  - uid: 86
+  - uid: 89
     components:
-    - type: MetaData
-      flags: PvsPriority
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -1.5,-1.5
       parent: 1
-  - uid: 87
+  - uid: 90
     components:
-    - type: MetaData
-      flags: PvsPriority
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -1.5,-0.5
       parent: 1
-  - uid: 88
+  - uid: 91
     components:
-    - type: MetaData
-      flags: PvsPriority
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -1.5,0.5
       parent: 1
-  - uid: 89
+  - uid: 92
     components:
-    - type: MetaData
-      flags: PvsPriority
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 2.5,-3.5
       parent: 1
-  - uid: 90
+  - uid: 93
     components:
-    - type: MetaData
-      flags: PvsPriority
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 2.5,-2.5
       parent: 1
-  - uid: 91
+  - uid: 94
     components:
-    - type: MetaData
-      flags: PvsPriority
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 2.5,-1.5
       parent: 1
-  - uid: 92
+  - uid: 95
     components:
-    - type: MetaData
-      flags: PvsPriority
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 2.5,-0.5
       parent: 1
-  - uid: 93
+  - uid: 96
     components:
-    - type: MetaData
-      flags: PvsPriority
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 2.5,0.5
       parent: 1
-  - uid: 94
+  - uid: 97
     components:
-    - type: MetaData
-      flags: PvsPriority
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -0.5,1.5
       parent: 1
-  - uid: 95
+  - uid: 98
     components:
-    - type: MetaData
-      flags: PvsPriority
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 1.5,1.5
       parent: 1
 - proto: WallPlastitaniumDiagonal
   entities:
-  - uid: 96
+  - uid: 99
     components:
     - type: Transform
       pos: -1.5,1.5
       parent: 1
-  - uid: 97
+  - uid: 100
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
@@ -719,7 +857,7 @@ entities:
       parent: 1
 - proto: WarpPointShip
   entities:
-  - uid: 98
+  - uid: 101
     components:
     - type: MetaData
       name: Ferry
@@ -728,23 +866,4 @@ entities:
       parent: 1
     - type: WarpPoint
       location: Ferry
-- proto: WindoorSecureSecurityLocked
-  entities:
-  - uid: 99
-    components:
-    - type: Transform
-      pos: 0.5,0.5
-      parent: 1
-- proto: WindowReinforcedDirectional
-  entities:
-  - uid: 100
-    components:
-    - type: Transform
-      pos: -0.5,0.5
-      parent: 1
-  - uid: 101
-    components:
-    - type: Transform
-      pos: 1.5,0.5
-      parent: 1
 ...
