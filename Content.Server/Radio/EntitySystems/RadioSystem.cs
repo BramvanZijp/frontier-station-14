@@ -1,3 +1,4 @@
+using Content.Server._NF.Radio; // Frontier
 using Content.Server.Administration.Logs;
 using Content.Server.Chat.Systems;
 using Content.Server.Power.Components;
@@ -35,11 +36,15 @@ public sealed class RadioSystem : EntitySystem
     // set used to prevent radio feedback loops.
     private readonly HashSet<string> _messages = new();
 
+    private EntityQuery<TelecomExemptComponent> _exemptQuery;
+
     public override void Initialize()
     {
         base.Initialize();
         SubscribeLocalEvent<IntrinsicRadioReceiverComponent, RadioReceiveEvent>(OnIntrinsicReceive);
         SubscribeLocalEvent<IntrinsicRadioTransmitterComponent, EntitySpokeEvent>(OnIntrinsicSpeak);
+
+        _exemptQuery = GetEntityQuery<TelecomExemptComponent>();
     }
 
     private void OnIntrinsicSpeak(EntityUid uid, IntrinsicRadioTransmitterComponent component, EntitySpokeEvent args)
@@ -97,6 +102,14 @@ public sealed class RadioSystem : EntitySystem
             name = mode;
         } // Frontier - code block to allow multi masks.
 
+        // Frontier: add name transform event
+        var transformEv = new RadioTransformMessageEvent(channel, radioSource, name, message, messageSource);
+        RaiseLocalEvent(radioSource, ref transformEv);
+        name = transformEv.Name;
+        message = transformEv.Message;
+        messageSource = transformEv.MessageSource;
+        // End Frontier
+
         name = FormattedMessage.EscapeText(name);
 
         SpeechVerbPrototype speech;
@@ -140,9 +153,8 @@ public sealed class RadioSystem : EntitySystem
 
         var sourceMapId = Transform(radioSource).MapID;
         var hasActiveServer = HasActiveServer(sourceMapId, channel.ID);
-        var hasMicro = HasComp<RadioMicrophoneComponent>(radioSource);
+        var sourceServerExempt = _exemptQuery.HasComp(radioSource);
 
-        var speakerQuery = GetEntityQuery<RadioSpeakerComponent>();
         var radioQuery = EntityQueryEnumerator<ActiveRadioComponent, TransformComponent>();
         while (canSend && radioQuery.MoveNext(out var receiver, out var radio, out var transform))
         {
@@ -157,7 +169,7 @@ public sealed class RadioSystem : EntitySystem
                 continue;
 
             // don't need telecom server for long range channels or handheld radios and intercoms
-            var needServer = !channel.LongRange && (!hasMicro || !speakerQuery.HasComponent(receiver));
+            var needServer = !channel.LongRange && !sourceServerExempt;
             if (needServer && !hasActiveServer)
                 continue;
 
